@@ -1,0 +1,277 @@
+.adminShell {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f7f4;
+  color: #111111;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #292929;
+  background: #111111;
+  color: #ffffff;
+}
+
+.sidebarBrand {
+  min-height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #292929;
+  padding: 0 28px;
+}
+
+.sidebarBrand a {
+  color: #ffffff;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 24px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.sidebarBrand span {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.navigation {
+  flex: 1;
+  overflow-y: auto;
+  padding: 27px 14px;
+}
+
+.navigationLabel {
+  display: block;
+  margin: 0 14px 13px;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.navigationLink {
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 3px;
+  padding: 0 14px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.navigationLink:hover {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+.navigationLink svg,
+.logoutButton svg,
+.mobileMenuButton svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.activeLink {
+  background: #ffffff;
+  color: #111111;
+}
+
+.activeLink:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.sidebarFooter {
+  border-top: 1px solid #292929;
+  padding: 16px 14px;
+}
+
+.logoutButton {
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 0;
+  background: transparent;
+  padding: 0 14px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.logoutButton:hover {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+.adminMain {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  margin-left: 250px;
+}
+
+.adminHeader {
+  position: sticky;
+  z-index: 800;
+  top: 0;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid #ddddda;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 0 35px;
+  backdrop-filter: blur(14px);
+}
+
+.headerIdentity {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.headerIdentity span {
+  color: #92928d;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.headerIdentity strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.adminIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #74746f;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.adminIndicator > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.adminContent {
+  min-height: calc(100vh - 76px);
+  padding: 35px;
+}
+
+.mobileMenuButton {
+  width: 40px;
+  height: 40px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddddda;
+  background: #ffffff;
+  cursor: pointer;
+  color: #111111;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 200ms ease;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .adminMain {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .mobileMenuButton {
+    display: inline-flex;
+  }
+
+  .overlay {
+    position: fixed;
+    z-index: 900;
+    inset: 0;
+    display: block;
+    border: 0;
+    background: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: min(285px, 86vw);
+  }
+
+  .adminHeader {
+    min-height: 68px;
+    padding: 0 16px;
+  }
+
+  .adminIndicator {
+    display: none;
+  }
+
+  .adminContent {
+    min-height: calc(100vh - 68px);
+    padding: 20px 14px;
+  }
+
+  .headerIdentity strong {
+    font-size: 16px;
+  }
+}
+

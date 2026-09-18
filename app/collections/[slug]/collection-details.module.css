@@ -1,0 +1,646 @@
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+}
+
+.hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-bottom: 1px solid #deded9;
+  background: #f2f2ed;
+  padding: 150px 30px 75px;
+}
+
+.heroWithImage {
+  color: #ffffff;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.76),
+      rgba(0, 0, 0, 0.04) 70%
+    );
+  opacity: 0;
+}
+
+.heroWithImage .heroOverlay {
+  opacity: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 55px;
+  color: #777772;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.heroWithImage .breadcrumbs {
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+.breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 15px;
+  color: #858580;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heroWithImage .eyebrow {
+  color:
+    rgba(255, 255, 255, 0.76);
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(55px, 10vw, 128px);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.hero p {
+  max-width: 590px;
+  margin: 27px 0 0;
+  color: #6d6d68;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.heroWithImage p {
+  color:
+    rgba(255, 255, 255, 0.82);
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 55px 30px 105px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 39px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 25px;
+}
+
+.toolbar > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toolbarLabel {
+  color: #92928d;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.toolbar strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.sortWrapper {
+  width: 210px;
+}
+
+.sortWrapper label {
+  display: block;
+  margin-bottom: 8px;
+  color: #898984;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.selectControl {
+  position: relative;
+}
+
+.selectControl select {
+  width: 100%;
+  height: 43px;
+  appearance: none;
+  border: 1px solid #d4d4cf;
+  border-radius: 0;
+  outline: 0;
+  background: #ffffff;
+  padding: 0 42px 0 13px;
+  color: #222220;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+}
+
+.selectControl svg {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+  fill: none;
+  stroke: #444440;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateY(-50%);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 52px 20px;
+}
+
+.productCard {
+  min-width: 0;
+}
+
+.productImageLink {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #efefeb;
+  color: inherit;
+  text-decoration: none;
+}
+
+.productImage {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+
+.productImageLink:hover
+  .productImage
+  img {
+  transform: scale(1.03);
+}
+
+.badges {
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  left: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badges span {
+  min-height: 25px;
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 0 9px;
+  color: #333330;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.viewProduct {
+  position: absolute;
+  z-index: 2;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:
+    rgba(17, 17, 17, 0.94);
+  padding: 0 16px;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  opacity: 0;
+  text-transform: uppercase;
+  transform: translateY(12px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.productImageLink:hover
+  .viewProduct {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.viewProduct svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.productInformation {
+  padding-top: 16px;
+}
+
+.sku {
+  display: block;
+  margin-bottom: 8px;
+  color: #999994;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.productName {
+  display: inline-block;
+  color: #1b1b19;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 20px;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 10px;
+}
+
+.priceRow span {
+  color: #222220;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.priceRow del {
+  color: #999994;
+  font-size: 10px;
+}
+
+.statePanel,
+.errorPage {
+  min-height: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 25px;
+  text-align: center;
+}
+
+.statePanel {
+  border: 1px solid #deded9;
+  background: #fafaf7;
+}
+
+.errorPage {
+  min-height: 100vh;
+  background: #f7f7f3;
+}
+
+.stateIcon {
+  width: 66px;
+  height: 66px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 1px solid #d3d3ce;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.stateIcon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #4b4b47;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.statePanel h2,
+.errorPage h1 {
+  max-width: 680px;
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(31px, 5vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.statePanel p,
+.errorPage p {
+  max-width: 510px;
+  margin: 17px auto 28px;
+  color: #74746f;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.errorActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #111111;
+  padding: 0 24px;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.primaryButton {
+  background: #111111;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #111111;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  margin-top: 75px;
+  border-top: 1px solid #deded9;
+  padding-top: 32px;
+}
+
+.pagination button {
+  border: 0;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  color: #333330;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  color: #b5b5b0;
+}
+
+.pagination span {
+  color: #777772;
+  font-size: 9px;
+}
+
+.loadingHero {
+  min-height: 580px;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece7 25%,
+      #f6f6f2 50%,
+      #ecece7 75%
+    );
+  background-size: 200% 100%;
+  animation:
+    skeletonLoading 1.4s infinite;
+}
+
+.skeletonImage {
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece7 25%,
+      #f6f6f2 50%,
+      #ecece7 75%
+    );
+  background-size: 200% 100%;
+  animation:
+    skeletonLoading 1.4s infinite;
+}
+
+.skeletonDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 17px;
+}
+
+.skeletonDetails span {
+  height: 10px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece7 25%,
+      #f6f6f2 50%,
+      #ecece7 75%
+    );
+  background-size: 200% 100%;
+  animation:
+    skeletonLoading 1.4s infinite;
+}
+
+.skeletonDetails span:nth-child(1) {
+  width: 35%;
+  height: 7px;
+}
+
+.skeletonDetails span:nth-child(2) {
+  width: 72%;
+  height: 18px;
+}
+
+.skeletonDetails span:nth-child(3) {
+  width: 40%;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .productGrid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 510px;
+    padding:
+      125px 22px 60px;
+  }
+
+  .content {
+    padding:
+      45px 22px 90px;
+  }
+
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sortWrapper {
+    width: 100%;
+  }
+
+  .productGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 40px 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    min-height: 465px;
+    padding:
+      110px 15px 45px;
+  }
+
+  .content {
+    padding:
+      40px 14px 75px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 38px;
+  }
+
+  .productGrid {
+    column-gap: 8px;
+  }
+
+  .productName {
+    font-size: 17px;
+  }
+
+  .viewProduct {
+    display: none;
+  }
+
+  .pagination {
+    gap: 12px;
+  }
+}
+
+@media (hover: none) {
+  .viewProduct {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .productImage img,
+  .viewProduct,
+  .loadingHero,
+  .skeletonImage,
+  .skeletonDetails span {
+    animation: none;
+    transition: none;
+  }
+}

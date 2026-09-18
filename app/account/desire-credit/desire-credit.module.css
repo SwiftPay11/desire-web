@@ -1,0 +1,1055 @@
+.page {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.backRow {
+  margin-bottom: 28px;
+}
+
+.backRow a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backRow svg,
+.lightButton svg,
+.primaryButton svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eyebrow,
+.eyebrowLight {
+  display: block;
+  margin-bottom: 13px;
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.eyebrowLight {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.58
+  );
+}
+
+.loadingState {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loadingState > span {
+  color: #777773;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.loadingState h1 {
+  max-width: 600px;
+  margin: 16px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.loadingState p {
+  margin: 12px 0 0;
+  color: #777773;
+  font-size: 11px;
+}
+
+.introHero,
+.accountHero {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  color: #ffffff;
+}
+
+.introHero {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(250px, 0.5fr);
+}
+
+.introHero::after,
+.accountHero::after {
+  position: absolute;
+  top: -170px;
+  right: -130px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.09
+    );
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.introContent {
+  position: relative;
+  z-index: 1;
+  padding: 54px;
+}
+
+.introContent h1,
+.accountHero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    45px,
+    6vw,
+    72px
+  );
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+}
+
+.introContent > p,
+.accountHeroTop p {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.67
+  );
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.introSide {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-left: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+  padding: 45px 34px;
+}
+
+.introSide > span {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.53
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.introSide strong {
+  margin-top: 10px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.introSide p {
+  margin: 15px 0 0;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.58
+  );
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.heroActions,
+.accountActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-top: 31px;
+}
+
+.lightButton,
+.primaryButton,
+.outlineButton {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  padding: 0 20px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.lightButton {
+  background: #ffffff;
+  color: #111111;
+}
+
+.primaryButton {
+  margin-top: 26px;
+  background: #111111;
+  color: #ffffff;
+}
+
+.outlineButton {
+  margin-top: 26px;
+  border: 1px solid #cfcfca;
+  color: #111111;
+}
+
+.darkTextLink {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.75
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-transform: uppercase;
+}
+
+.explainerGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 24px;
+  background: #ddddda;
+}
+
+.explainerGrid article {
+  min-height: 230px;
+  background: #ffffff;
+  padding: 31px;
+}
+
+.explainerGrid article > span {
+  color: #8b8b86;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 16px;
+}
+
+.explainerGrid h2 {
+  margin: 39px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.explainerGrid p {
+  max-width: 300px;
+  margin: 12px 0 0;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.statusHero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 45px;
+  border-bottom: 1px solid #d9d9d4;
+  padding: 25px 0 43px;
+}
+
+.statusHero > div {
+  max-width: 790px;
+}
+
+.statusHero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    39px,
+    5vw,
+    61px
+  );
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.statusHero p {
+  max-width: 650px;
+  margin: 19px 0 0;
+  color: #73736e;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.statusBadge,
+.accountStatus {
+  min-height: 33px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cfcfca;
+  padding: 0 13px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.noticeCard {
+  margin-top: 24px;
+  border-left: 3px solid #111111;
+  background: #f4f4f0;
+  padding: 28px;
+}
+
+.noticeCard > span,
+.approvedNotice span,
+.restrictionNotice span {
+  display: block;
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.noticeCard h2 {
+  margin: 10px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.noticeCard p {
+  max-width: 780px;
+  margin: 12px 0 0;
+  color: #666662;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.approvedNotice {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 24px;
+  background: #ddddda;
+}
+
+.approvedNotice > div {
+  background: #111111;
+  padding: 28px;
+  color: #ffffff;
+}
+
+.approvedNotice span {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  );
+}
+
+.approvedNotice strong {
+  display: block;
+  margin-top: 13px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.applicationLayout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.6fr)
+    minmax(280px, 0.55fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.applicationCard,
+.sideCard,
+.accountDetailsCard,
+.nextPaymentCard {
+  border: 1px solid #deded9;
+  background: #ffffff;
+  padding: 31px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.sectionHeader h2,
+.sideCard h2,
+.nextPaymentCard h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.applicationNumber {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  background: #ddddda;
+}
+
+.detailItem {
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 19px;
+}
+
+.detailItem span {
+  color: #7a7a75;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.detailItem strong {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sideCard p {
+  margin: 17px 0 0;
+  color: #6f6f6a;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.errorBanner {
+  margin-top: 20px;
+  border-left: 3px solid #111111;
+  background: #f4f4f0;
+  padding: 18px 20px;
+  color: #5f5f5a;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.accountHero {
+  padding: 42px;
+}
+
+.accountHeroTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.accountHeroTop > div {
+  max-width: 720px;
+}
+
+.accountStatus {
+  border-color: rgba(
+    255,
+    255,
+    255,
+    0.25
+  );
+  color: rgba(
+    255,
+    255,
+    255,
+    0.83
+  );
+}
+
+.balanceGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.75fr)
+    minmax(0, 0.75fr);
+  gap: 1px;
+  margin-top: 36px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.16
+  );
+}
+
+.balanceGrid > div {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111111;
+  padding: 23px;
+}
+
+.balanceGrid span {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.balanceGrid strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.mainBalance strong {
+  font-size: clamp(
+    37px,
+    5vw,
+    58px
+  );
+  letter-spacing: -0.04em;
+}
+
+.accountActions {
+  position: relative;
+  z-index: 1;
+}
+
+.restrictionNotice {
+  display: grid;
+  grid-template-columns:
+    minmax(250px, 0.7fr)
+    minmax(0, 1fr);
+  gap: 40px;
+  margin-top: 22px;
+  border: 1px solid #deded9;
+  padding: 28px;
+}
+
+.restrictionNotice h2 {
+  margin: 9px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.restrictionNotice p {
+  margin: 0;
+  color: #6f6f6a;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.accountDetailsGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(280px, 0.5fr);
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.nextPaymentAmount {
+  display: block;
+  margin-top: 30px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.nextPaymentCard dl {
+  margin: 30px 0 0;
+}
+
+.nextPaymentCard dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #e2e2dd;
+  padding: 15px 0;
+}
+
+.nextPaymentCard dt {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nextPaymentCard dd {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.approvalSummary {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 22px;
+  background: #ddddda;
+}
+
+.approvalSummary > div {
+  background: #ffffff;
+  padding: 25px;
+}
+
+.approvalSummary span {
+  display: block;
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.approvalSummary strong {
+  display: block;
+  margin-top: 13px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* ========================================
+   DESIRE CREDIT PURCHASES
+======================================== */
+
+.purchasesSection {
+  margin-top: 22px;
+  border: 1px solid #deded9;
+  background: #ffffff;
+  padding: 31px;
+}
+
+.purchaseCount {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #d8d8d3;
+  padding: 0 12px;
+  color: #686863;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.emptyPurchases {
+  border-top: 1px solid #e2e2dd;
+  padding: 38px 0 7px;
+}
+
+.emptyPurchases h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.emptyPurchases p {
+  max-width: 540px;
+  margin: 12px 0 0;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.purchaseList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.purchaseCard {
+  border: 1px solid #deded9;
+  background: #ffffff;
+}
+
+.purchaseCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 24px;
+}
+
+.purchaseCardTop > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.purchaseCardTop > div > span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.purchaseCardTop > div > strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.purchaseStatus {
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #cfcfca;
+  padding: 0 12px;
+  color: #555550;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.purchaseDetails {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  background: #ddddda;
+  border-top: 1px solid #ddddda;
+  border-bottom: 1px solid #ddddda;
+}
+
+.purchaseDetails > div {
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 18px;
+}
+
+.purchaseDetails span {
+  color: #7a7a75;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.purchaseDetails strong {
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.purchaseFooter {
+  min-height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 15px 24px;
+}
+
+.purchaseFooter > span {
+  color: #777773;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.purchaseFooter a {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.purchaseFooter a svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 900px) {
+  .introHero {
+    grid-template-columns: 1fr;
+  }
+
+  .introSide {
+    border-top: 1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.16
+      );
+    border-left: 0;
+  }
+
+  .applicationLayout,
+  .accountDetailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .purchaseDetails {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+@media (max-width: 700px) {
+  .introContent {
+    padding: 35px 23px;
+  }
+
+  .introSide {
+    padding: 28px 23px;
+  }
+
+  .introContent h1,
+  .accountHero h1 {
+    font-size: 43px;
+  }
+
+  .explainerGrid,
+  .approvedNotice,
+  .approvalSummary,
+  .balanceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statusHero,
+  .accountHeroTop {
+    flex-direction: column;
+  }
+
+  .statusHero {
+    gap: 25px;
+  }
+
+  .accountHero {
+    padding: 31px 22px;
+  }
+
+  .mainBalance strong {
+    font-size: 42px;
+  }
+
+  .restrictionNotice {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .purchasesSection {
+    padding: 23px 18px;
+  }
+
+  .purchaseCardTop {
+    padding: 20px 17px;
+  }
+
+  .purchaseCardTop > div > strong {
+    font-size: 26px;
+  }
+
+  .purchaseDetails {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .purchaseDetails > div {
+    min-height: 86px;
+    padding: 15px;
+  }
+
+  .purchaseFooter {
+    padding: 15px 17px;
+  }
+}
+
+@media (max-width: 450px) {
+  .applicationCard,
+  .sideCard,
+  .accountDetailsCard,
+  .nextPaymentCard {
+    padding: 23px 18px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+  }
+
+  .purchaseDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .purchaseCardTop,
+  .purchaseFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .purchaseFooter {
+    gap: 13px;
+  }
+}

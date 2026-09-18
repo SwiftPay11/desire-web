@@ -1,0 +1,803 @@
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #8a8a8a;
+  font-size: 11px;
+}
+
+.breadcrumb a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #111111;
+}
+
+.breadcrumb strong {
+  color: #111111;
+}
+
+.eyebrow {
+  display: block;
+  color: #888888;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.header {
+  padding: 30px 32px;
+  border: 1px solid #e4e4e1;
+  border-radius: 19px;
+  background: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header h1 {
+  margin: 8px 0;
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.header p {
+  max-width: 600px;
+  margin: 0;
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.refreshButton {
+  min-height: 40px;
+  padding: 0 13px;
+  border: 1px solid #dededb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.refreshButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.refreshButton svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.statusBadge {
+  min-height: 29px;
+  padding: 0 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.statusActive {
+  background: #e8f2ea;
+  color: #3f704b;
+}
+
+.statusSuspended {
+  background: #f7f0df;
+  color: #8b681f;
+}
+
+.statusFrozen {
+  background: #eaf1f7;
+  color: #42627e;
+}
+
+.statusClosed {
+  background: #eeeeec;
+  color: #686868;
+}
+
+.successBanner {
+  padding: 16px 18px;
+  border: 1px solid #cee2d2;
+  border-radius: 12px;
+  background: #f0f8f2;
+  color: #376242;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.successBanner svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.successBanner strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.successBanner p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.statCard {
+  min-height: 110px;
+  padding: 19px;
+  border: 1px solid #e4e4e1;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.statCard span {
+  color: #777777;
+  font-size: 10px;
+}
+
+.statCard strong {
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.usageCard {
+  padding: 24px;
+  border-radius: 17px;
+  background: #111111;
+  color: #ffffff;
+}
+
+.usageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.usageHeader .eyebrow {
+  color: #8d8d8d;
+}
+
+.usageHeader h2 {
+  margin: 7px 0 0;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.usageHeader > strong {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.progressTrack {
+  height: 7px;
+  margin-top: 24px;
+  border-radius: 999px;
+  background: #303030;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: inherit;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.usageFooter {
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #999999;
+  font-size: 9px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 17px;
+  align-items: start;
+}
+
+.mainColumn {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detailsCard,
+.actionCard,
+.metaCard {
+  padding: 25px;
+  border: 1px solid #e3e3e0;
+  border-radius: 17px;
+  background: #ffffff;
+}
+
+.sectionHeader {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ececea;
+}
+
+.sectionHeader h2,
+.actionCard h2 {
+  margin: 6px 0 0;
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail {
+  min-height: 82px;
+  padding: 18px 12px 18px 0;
+  border-bottom: 1px solid #efefed;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.detail:nth-child(odd) {
+  padding-right: 25px;
+}
+
+.detail:nth-child(even) {
+  padding-left: 25px;
+  border-left: 1px solid #efefed;
+}
+
+.detail span {
+  color: #888888;
+  font-size: 10px;
+}
+
+.detail strong {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  margin-top: 18px;
+  padding: 17px;
+  border-radius: 10px;
+  background: #f5f5f3;
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.actionCard > p {
+  margin: 10px 0 0;
+  color: #777777;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.actions {
+  margin-top: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actions button {
+  width: 100%;
+  min-height: 43px;
+  border-radius: 8px;
+  padding: 0 13px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primaryAction {
+  border: 1px solid #111111;
+  background: #111111;
+  color: #ffffff;
+}
+
+.secondaryAction {
+  border: 1px solid #ddddda;
+  background: #ffffff;
+  color: #111111;
+}
+
+.metaCard > .eyebrow {
+  margin-bottom: 13px;
+}
+
+.metaRow {
+  padding: 13px 0;
+  border-bottom: 1px solid #eeeeec;
+}
+
+.metaRow:last-child {
+  border-bottom: 0;
+}
+
+.metaRow span {
+  display: block;
+  margin-bottom: 5px;
+  color: #888888;
+  font-size: 9px;
+}
+
+.metaRow strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: min(520px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow:
+    0 25px 80px
+    rgba(0, 0, 0, 0.25);
+}
+
+.modalHeader {
+  padding: 22px 23px;
+  border-bottom: 1px solid #ececea;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.modalHeader h2 {
+  margin: 6px 0 0;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+}
+
+.closeButton {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border: 1px solid #e1e1de;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.closeButton svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #111111;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.modal form {
+  padding: 23px;
+}
+
+.field {
+  margin-bottom: 19px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333333;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.field textarea,
+.field select,
+.currencyInput {
+  width: 100%;
+  border: 1px solid #dededb;
+  border-radius: 9px;
+  background: #fafaf9;
+}
+
+.field select {
+  min-height: 45px;
+  padding: 0 12px;
+  outline: none;
+  color: #111111;
+  font: inherit;
+  font-size: 12px;
+}
+
+.field textarea {
+  min-height: 105px;
+  padding: 12px;
+  resize: vertical;
+  outline: none;
+  color: #111111;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.field textarea:focus,
+.field select:focus,
+.currencyInput:focus-within {
+  border-color: #999999;
+  background: #ffffff;
+}
+
+.field small {
+  display: block;
+  margin-top: 7px;
+  color: #888888;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.currencyInput {
+  min-height: 45px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currencyInput span {
+  color: #666666;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.currencyInput input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111111;
+  font: inherit;
+  font-size: 12px;
+}
+
+.modalError {
+  margin-bottom: 18px;
+  padding: 12px 13px;
+  border: 1px solid #edd0d0;
+  border-radius: 8px;
+  background: #fff3f3;
+  color: #853737;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.modalActions button {
+  min-height: 42px;
+  padding: 0 17px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modalActions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  border: 1px solid #ddddda;
+  background: #ffffff;
+  color: #111111;
+}
+
+.confirmButton {
+  border: 1px solid #111111;
+  background: #111111;
+  color: #ffffff;
+}
+
+.errorState {
+  min-height: 430px;
+  padding: 50px 25px;
+  border: 1px solid #e3e3e0;
+  border-radius: 18px;
+  background: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorState > svg {
+  width: 39px;
+  height: 39px;
+  margin-bottom: 16px;
+  fill: none;
+  stroke: #111111;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.errorState h1 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+.errorState p {
+  margin: 0;
+  color: #777777;
+  font-size: 12px;
+}
+
+.errorState button {
+  margin-top: 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+  padding: 11px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loadingPage {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loadingHeader,
+.loadingStats span,
+.loadingGrid span {
+  background:
+    linear-gradient(
+      90deg,
+      #eeeeec 25%,
+      #f7f7f5 50%,
+      #eeeeec 75%
+    );
+  background-size: 200% 100%;
+  animation: loading 1.4s infinite;
+}
+
+.loadingHeader {
+  height: 160px;
+  border-radius: 18px;
+}
+
+.loadingStats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 12px;
+}
+
+.loadingStats span {
+  height: 110px;
+  border-radius: 14px;
+}
+
+.loadingGrid {
+  display: grid;
+  grid-template-columns:
+    1fr 330px;
+  gap: 17px;
+}
+
+.loadingGrid span {
+  height: 500px;
+  border-radius: 17px;
+}
+
+@keyframes loading {
+  0% {
+    background-position:
+      200% 0;
+  }
+
+  100% {
+    background-position:
+      -200% 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .statsGrid,
+  .loadingStats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .layout,
+  .loadingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 23px 19px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 33px;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .detailsCard,
+  .actionCard,
+  .metaCard {
+    padding: 20px 17px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail,
+  .detail:nth-child(odd),
+  .detail:nth-child(even) {
+    padding: 16px 0;
+    border-left: 0;
+  }
+
+  .usageCard {
+    padding: 20px 17px;
+  }
+}
+
+@media (max-width: 500px) {
+  .statsGrid,
+  .loadingStats {
+    grid-template-columns:
+      1fr 1fr;
+    gap: 9px;
+  }
+
+  .statCard {
+    min-height: 95px;
+    padding: 15px;
+  }
+
+  .statCard strong {
+    font-size: 17px;
+  }
+
+  .headerActions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .refreshButton {
+    width: 100%;
+  }
+
+  .usageHeader {
+    align-items: flex-start;
+  }
+
+  .usageHeader > strong {
+    font-size: 23px;
+  }
+
+  .modalBackdrop {
+    padding: 10px;
+  }
+
+  .modalHeader,
+  .modal form {
+    padding: 19px 16px;
+  }
+
+  .modalActions {
+    flex-direction: column-reverse;
+  }
+
+  .modalActions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,850 @@
+.page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #111111;
+}
+
+.dashboardHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 32px;
+}
+
+.dashboardHeader > div {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #858580;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.dashboardHeader h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    48px,
+    6vw,
+    72px
+  );
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.dashboardHeader p {
+  max-width: 630px;
+  margin: 17px 0 0;
+  color: #70706b;
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.refreshButton {
+  min-height: 44px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #d4d4cf;
+  background: #ffffff;
+  padding: 0 15px;
+  cursor: pointer;
+  color: #333330;
+  font: inherit;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.refreshButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.refreshButton svg,
+.cardIcon svg,
+.cardLink svg,
+.panelHeader svg,
+.attentionCount svg,
+.panelAction svg,
+.creditHeader svg,
+.creditActions svg,
+.headerLink svg,
+.orderArrow svg,
+.quickActionGrid svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 13px 15px;
+}
+
+.errorBanner p {
+  margin: 0;
+  color: #8f4141;
+  font-size: 9px;
+}
+
+.errorBanner button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #8f4141;
+  font: inherit;
+  font-size: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.overviewCard {
+  min-height: 185px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 21px;
+  color: #111111;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease;
+}
+
+.overviewCard:hover {
+  transform: translateY(-2px);
+  border-color: #111111;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardTop > span {
+  color: #858580;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cardIcon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #deded9;
+  background: #fafaf7;
+}
+
+.overviewCard > strong {
+  margin-top: 27px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    30px,
+    4vw,
+    44px
+  );
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  border-top: 1px solid #ecece8;
+  padding-top: 16px;
+  color: #777772;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cardLink svg {
+  width: 15px;
+  height: 15px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.8fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.attentionPanel,
+.inventoryPanel,
+.ordersPanel {
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 25px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.panelHeader h2,
+.quickActionHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.panelHeader > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.attentionCount {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #9a7121;
+}
+
+.attentionCount strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.attentionList {
+  border-top: 1px solid #e2e2dd;
+}
+
+.attentionItem {
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #e2e2dd;
+  color: #333330;
+  text-decoration: none;
+}
+
+.attentionItem > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.attentionItem strong {
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.attentionDot,
+.attentionDotActive {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #d0d0cb;
+}
+
+.attentionDotActive {
+  background: #b88927;
+}
+
+.attentionValue {
+  min-width: 29px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #deded9;
+  background: #fafaf7;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #deded9;
+  border-left: 1px solid #deded9;
+}
+
+.statGrid > div {
+  min-height: 103px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #deded9;
+  border-bottom: 1px solid #deded9;
+  padding: 17px;
+}
+
+.statGrid span {
+  color: #858580;
+  font-size: 7px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statGrid strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.panelAction {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  background: #111111;
+  padding: 0 17px;
+  color: #ffffff;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.creditSection {
+  margin-bottom: 24px;
+  background: #111111;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.creditHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 26px;
+}
+
+.creditEyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.creditHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.creditHeader p {
+  max-width: 570px;
+  margin: 12px 0 0;
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.6
+    );
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.creditHeader > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.creditGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+}
+
+.creditStat {
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+  padding: 18px;
+}
+
+.creditStat span {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    );
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.creditStat strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.creditMoneyStat strong {
+  font-size: 21px;
+}
+
+.creditActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.creditActions a {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+  padding: 0 16px;
+  color: #ffffff;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.creditActions a:first-child {
+  background: #ffffff;
+  color: #111111;
+}
+
+.ordersPanel {
+  margin-bottom: 24px;
+}
+
+.headerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #555550;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.headerLink svg {
+  width: 15px;
+  height: 15px;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-top: 1px solid #deded9;
+}
+
+.ordersTable {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.ordersTable th {
+  border-bottom: 1px solid #deded9;
+  padding: 14px 10px;
+  color: #8b8b86;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.ordersTable td {
+  border-bottom: 1px solid #ecece8;
+  padding: 16px 10px;
+  color: #4f4f4a;
+  font-size: 8px;
+  vertical-align: middle;
+}
+
+.ordersTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.customerCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.customerCell strong {
+  color: #222220;
+  font-size: 8px;
+}
+
+.customerCell span {
+  color: #92928d;
+  font-size: 7px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  border: 1px solid #deded9;
+  padding: 0 8px;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.statusNeutral {
+  background: #f5f5f1;
+  color: #686863;
+}
+
+.statusSuccess {
+  border-color: #c9dbc9;
+  background: #eff7ef;
+  color: #47734b;
+}
+
+.statusWarning {
+  border-color: #e1d2aa;
+  background: #fff8e7;
+  color: #906c21;
+}
+
+.statusDanger {
+  border-color: #e3c0c0;
+  background: #fff1f1;
+  color: #974b4b;
+}
+
+.statusInfo {
+  border-color: #ccd5dd;
+  background: #f0f5f8;
+  color: #4e687a;
+}
+
+.orderArrow {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #deded9;
+  color: #111111;
+}
+
+.orderArrow svg {
+  width: 14px;
+  height: 14px;
+}
+
+.emptyOrders {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #deded9;
+  color: #858580;
+  font-size: 9px;
+}
+
+.quickActions {
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 25px;
+}
+
+.quickActionHeader {
+  margin-bottom: 20px;
+}
+
+.quickActionGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quickActionGrid a {
+  min-height: 75px;
+  display: grid;
+  grid-template-columns:
+    22px minmax(0, 1fr) 17px;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid #deded9;
+  background: #fafaf7;
+  padding: 0 16px;
+  color: #222220;
+  text-decoration: none;
+}
+
+.quickActionGrid a:hover {
+  border-color: #111111;
+  background: #ffffff;
+}
+
+.quickActionGrid a > svg:first-child {
+  width: 20px;
+  height: 20px;
+}
+
+.quickActionGrid a > svg:last-child {
+  width: 14px;
+  height: 14px;
+}
+
+.quickActionGrid span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.skeletonPage {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skeletonPage > span,
+.skeletonCards span {
+  display: block;
+  background:
+    linear-gradient(
+      90deg,
+      #e8e8e4 25%,
+      #f4f4f1 50%,
+      #e8e8e4 75%
+    );
+  background-size: 200% 100%;
+  animation:
+    dashboardSkeleton 1.3s infinite;
+}
+
+.skeletonPage > span:nth-child(1) {
+  height: 150px;
+}
+
+.skeletonCards {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 14px;
+}
+
+.skeletonCards span {
+  height: 185px;
+}
+
+.skeletonPage > span:nth-child(3) {
+  height: 320px;
+}
+
+.skeletonPage > span:nth-child(4) {
+  height: 280px;
+}
+
+@keyframes dashboardSkeleton {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .overviewGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .creditGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .quickActionGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .skeletonCards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboardHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .refreshButton {
+    width: 100%;
+  }
+
+  .overviewGrid,
+  .creditGrid,
+  .quickActionGrid,
+  .skeletonCards {
+    grid-template-columns: 1fr;
+  }
+
+  .creditSection {
+    padding: 22px 17px;
+  }
+
+  .creditHeader {
+    flex-direction: column;
+  }
+
+  .creditActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .creditActions a {
+    justify-content: space-between;
+  }
+
+  .panelHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .attentionPanel,
+  .inventoryPanel,
+  .ordersPanel,
+  .quickActions {
+    padding: 20px 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonPage > span,
+  .skeletonCards span {
+    animation: none;
+  }
+
+  .overviewCard {
+    transition: none;
+  }
+}

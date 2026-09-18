@@ -1,0 +1,365 @@
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: #111111;
+}
+
+.hero {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 38px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #858580;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(48px, 7vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: #6e6e69;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 14px 17px;
+}
+
+.errorBanner p {
+  margin: 0;
+  color: #8f4141;
+  font-size: 10px;
+}
+
+.errorBanner button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #8f4141;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.securityLayout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 350px);
+  gap: 24px;
+  align-items: start;
+}
+
+.mainColumn,
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.securityCard,
+.protectionCard,
+.tipsCard {
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 28px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 25px;
+}
+
+.headerIcon {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d3d3ce;
+  background: #fafaf7;
+}
+
+.headerIcon svg,
+.passwordInput svg,
+.protectionCard > svg,
+.tipList svg,
+.toast svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.cardHeader p {
+  margin: 10px 0 0;
+  color: #73736e;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form label > span {
+  color: #73736e;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.passwordInput {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d1d1cc;
+  background: #ffffff;
+  padding: 0 12px;
+}
+
+.passwordInput:focus-within {
+  border-color: #111111;
+}
+
+.passwordInput > svg {
+  width: 17px;
+  height: 17px;
+  color: #858580;
+}
+
+.passwordInput input {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #222220;
+  font: inherit;
+  font-size: 10px;
+}
+
+.passwordInput button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  color: #767671;
+}
+
+.passwordInput button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.form small {
+  color: #92928d;
+  font-size: 8px;
+}
+
+.saveButton {
+  min-height: 50px;
+  margin-top: 5px;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 21px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.saveButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.protectionCard {
+  background: #111111;
+  color: #ffffff;
+}
+
+.protectionCard > svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 25px;
+}
+
+.protectionCard .eyebrow {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.protectionCard h3,
+.tipsCard h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.protectionCard p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.tipsCard h3 {
+  margin-bottom: 22px;
+}
+
+.tipList {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  border-top: 1px solid #deded9;
+  padding-top: 21px;
+}
+
+.tipList > div {
+  display: grid;
+  grid-template-columns:
+    18px minmax(0, 1fr);
+  gap: 10px;
+  color: #64645f;
+}
+
+.tipList svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tipList span {
+  font-size: 9px;
+  line-height: 1.65;
+}
+
+.toast {
+  position: fixed;
+  z-index: 4000;
+  top: 105px;
+  right: 25px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #111111;
+  padding: 0 18px;
+  color: #ffffff;
+  font-size: 9px;
+  box-shadow:
+    0 15px 45px
+    rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 900px) {
+  .securityLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .sideColumn {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .sideColumn {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .securityCard,
+  .protectionCard,
+  .tipsCard {
+    padding: 21px 17px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .saveButton {
+    width: 100%;
+  }
+
+  .toast {
+    top: 90px;
+    right: 13px;
+    left: 13px;
+  }
+}

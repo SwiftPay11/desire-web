@@ -1,0 +1,596 @@
+.page {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.backRow {
+  margin-bottom: 28px;
+}
+
+.backRow a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backRow svg,
+.installmentAction svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eyebrow,
+.eyebrowLight {
+  display: block;
+  margin-bottom: 12px;
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.eyebrowLight {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.58
+  );
+}
+
+.loadingState,
+.errorState {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loadingState > span,
+.errorState > span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.loadingState h1,
+.errorState h1 {
+  margin: 14px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.loadingState p,
+.errorState p {
+  max-width: 520px;
+  margin: 13px 0 0;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.primaryButton {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  background: #111111;
+  padding: 0 20px;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  padding: 42px;
+  color: #ffffff;
+}
+
+.hero::after {
+  position: absolute;
+  top: -170px;
+  right: -130px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.09
+    );
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.heroTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.heroTop h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    43px,
+    6vw,
+    70px
+  );
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.heroTop p {
+  max-width: 580px;
+  margin: 19px 0 0;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.64
+  );
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.statusBadge {
+  min-height: 33px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+  padding: 0 13px;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.83
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroBalances {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.75fr)
+    minmax(0, 0.75fr);
+  gap: 1px;
+  margin-top: 35px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.15
+  );
+}
+
+.heroBalances > div {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111111;
+  padding: 22px;
+}
+
+.heroBalances span {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroBalances strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.mainBalance strong {
+  font-size: clamp(
+    36px,
+    5vw,
+    54px
+  );
+  letter-spacing: -0.04em;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 22px;
+  background: #ddddda;
+}
+
+.summaryItem {
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.summaryItem span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.summaryItem strong {
+  margin-top: 15px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.scheduleSection {
+  margin-top: 22px;
+  border: 1px solid #deded9;
+  background: #ffffff;
+  padding: 31px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 28px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 31px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.sectionHeader p {
+  max-width: 550px;
+  margin: 10px 0 0;
+  color: #777773;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.scheduleProgress {
+  min-width: 145px;
+  border-left: 1px solid #ddddda;
+  padding-left: 24px;
+}
+
+.scheduleProgress span {
+  display: block;
+  color: #777773;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.scheduleProgress strong {
+  display: block;
+  margin-top: 8px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.emptySchedule {
+  border-top: 1px solid #e1e1dc;
+  padding: 35px 0 5px;
+}
+
+.emptySchedule h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.emptySchedule p {
+  max-width: 550px;
+  margin: 10px 0 0;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.installmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.installmentCard {
+  display: grid;
+  grid-template-columns:
+    115px
+    minmax(0, 1fr)
+    175px;
+  border: 1px solid #deded9;
+}
+
+.installmentNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #deded9;
+  padding: 19px;
+}
+
+.installmentNumber span {
+  color: #777773;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.installmentNumber strong {
+  margin-top: 18px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.installmentInfo {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  background: #deded9;
+}
+
+.installmentInfo > div {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 18px;
+}
+
+.installmentInfo span {
+  color: #777773;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.installmentInfo strong {
+  margin-top: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.installmentAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-left: 1px solid #deded9;
+  padding: 18px;
+}
+
+.installmentStatus {
+  min-height: 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d3d3ce;
+  padding: 0 10px;
+  color: #62625e;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.installmentAction a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111111;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.completedText {
+  color: #777773;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .installmentCard {
+    grid-template-columns:
+      95px
+      minmax(0, 1fr);
+  }
+
+  .installmentInfo {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+  .installmentAction {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #deded9;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 31px 22px;
+  }
+
+  .heroTop {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .heroTop h1 {
+    font-size: 43px;
+  }
+
+  .heroBalances,
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainBalance strong {
+    font-size: 42px;
+  }
+
+  .scheduleSection {
+    padding: 23px 18px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .scheduleProgress {
+    width: 100%;
+    border-top: 1px solid #ddddda;
+    border-left: 0;
+    padding-top: 17px;
+    padding-left: 0;
+  }
+
+  .installmentCard {
+    grid-template-columns: 1fr;
+  }
+
+  .installmentNumber {
+    flex-direction: row;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 1px solid #deded9;
+  }
+
+  .installmentNumber strong {
+    margin-top: 0;
+  }
+
+  .installmentAction {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .installmentInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .installmentAction {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .loadingState h1,
+  .errorState h1 {
+    font-size: 34px;
+  }
+}

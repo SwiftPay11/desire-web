@@ -1,0 +1,878 @@
+.page {
+  width: 100%;
+  max-width: 1480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 125px 30px 100px;
+  background: #ffffff;
+  color: #111111;
+}
+
+.topNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 29px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 19px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #595954;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backLink svg,
+.addAddressButton svg,
+.continueButton svg,
+.successToast svg,
+.securityNote svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  color: #a0a09b;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.steps .activeStep {
+  color: #111111;
+}
+
+.hero {
+  margin-bottom: 31px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 40px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 11px;
+  color: #858580;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(45px, 6vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: #70706b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 14px 17px;
+}
+
+.errorBanner p {
+  margin: 0;
+  color: #8f4141;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.errorBanner button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #8f4141;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.checkoutLayout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 405px);
+  align-items: start;
+  gap: 25px;
+}
+
+.mainColumn {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 30px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.panelHeader .eyebrow {
+  margin-bottom: 8px;
+}
+
+.panelHeader h2,
+.summaryPanel h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.addAddressButton {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d0d0cb;
+  background: #ffffff;
+  padding: 0 14px;
+  cursor: pointer;
+  color: #444440;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.addressGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.addressCard {
+  position: relative;
+  border: 1px solid #deded9;
+  background: #fafaf7;
+  padding: 0;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.selectedAddress {
+  border-color: #111111;
+  background: #ffffff;
+}
+
+.addressSelector {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  border: 0;
+  background: transparent;
+  padding: 21px;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+
+.radioCircle {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.selectedAddress .radioCircle {
+  border-color: #111111;
+  background: #111111;
+  box-shadow: inset 0 0 0 4px #ffffff;
+}
+
+.addressContent {
+  min-width: 0;
+}
+
+.addressTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.addressTop strong {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.addressTop span {
+  background: #111111;
+  padding: 5px 7px;
+  color: #ffffff;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.addressContent p {
+  margin: 3px 0;
+  color: #74746f;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.defaultButton {
+  margin: 0 21px 18px 49px;
+  border: 0;
+  border-bottom: 1px solid #777772;
+  background: transparent;
+  padding: 0 0 3px;
+  cursor: pointer;
+  color: #666661;
+  font: inherit;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.defaultButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.noAddresses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed #d8d8d3;
+  background: #fafaf7;
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.noAddresses svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 16px;
+  fill: none;
+  stroke: #555550;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.noAddresses h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.noAddresses p {
+  margin: 9px 0 0;
+  color: #777772;
+  font-size: 10px;
+}
+
+.addressForm {
+  margin-top: 25px;
+  border-top: 1px solid #deded9;
+  padding-top: 27px;
+}
+
+.formHeading {
+  margin-bottom: 22px;
+}
+
+.formHeading .eyebrow {
+  margin-bottom: 6px;
+}
+
+.formHeading h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.formError {
+  margin: 0 0 19px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 12px 14px;
+  color: #8f4141;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.formGrid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGrid label > span {
+  color: #777772;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.formGrid input {
+  width: 100%;
+  height: 47px;
+  border: 1px solid #d3d3ce;
+  border-radius: 0;
+  outline: 0;
+  background: #ffffff;
+  padding: 0 13px;
+  color: #222220;
+  font: inherit;
+  font-size: 10px;
+}
+
+.formGrid input:focus,
+.notesInput:focus {
+  border-color: #111111;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.defaultCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 19px;
+  cursor: pointer;
+  color: #555550;
+  font-size: 9px;
+}
+
+.defaultCheckbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.defaultCheckbox > span {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  border: 1px solid #aaa;
+  background: #ffffff;
+}
+
+.defaultCheckbox input:checked + span {
+  border-color: #111111;
+  background: #111111;
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+.saveAddressButton {
+  min-height: 49px;
+  margin-top: 22px;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 21px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.saveAddressButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.characterCount {
+  color: #92928d;
+  font-size: 8px;
+}
+
+.notesInput {
+  width: 100%;
+  min-height: 145px;
+  resize: vertical;
+  border: 1px solid #d3d3ce;
+  border-radius: 0;
+  outline: 0;
+  background: #ffffff;
+  padding: 15px;
+  color: #222220;
+  font: inherit;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.summaryPanel {
+  position: sticky;
+  top: 105px;
+  border: 1px solid #dfdfda;
+  background: #f8f8f4;
+  padding: 29px;
+}
+
+.summaryPanel h2 {
+  margin-bottom: 25px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  border-top: 1px solid #deded9;
+  border-bottom: 1px solid #deded9;
+  padding: 21px 0;
+}
+
+.summaryItem {
+  display: grid;
+  grid-template-columns:
+    62px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+}
+
+.summaryImage {
+  position: relative;
+  width: 62px;
+  height: 76px;
+  background: #ededE8;
+}
+
+.summaryImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.summaryImage span {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.summaryItemInfo {
+  min-width: 0;
+}
+
+.summaryItemInfo strong {
+  display: block;
+  overflow: hidden;
+  color: #222220;
+  font-size: 10px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summaryItemInfo p {
+  margin: 7px 0 0;
+  color: #858580;
+  font-size: 8px;
+}
+
+.summaryItemPrice {
+  color: #333330;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  border-bottom: 1px solid #deded9;
+  padding: 22px 0;
+}
+
+.summaryRows > div,
+.totalRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.summaryRows span {
+  color: #74746f;
+  font-size: 10px;
+}
+
+.summaryRows strong {
+  color: #333330;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.totalRow {
+  align-items: center;
+  padding: 23px 0;
+}
+
+.totalRow span {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.totalRow strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.selectedAddressSummary {
+  border-top: 1px solid #deded9;
+  padding: 20px 0;
+}
+
+.selectedAddressSummary > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #858580;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.selectedAddressSummary strong {
+  font-size: 10px;
+}
+
+.selectedAddressSummary p {
+  margin: 7px 0 0;
+  color: #777772;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.continueButton {
+  width: 100%;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 19px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.securityNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 19px;
+  color: #777772;
+}
+
+.securityNote p {
+  margin: 0;
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+.successToast {
+  position: fixed;
+  z-index: 4000;
+  top: 110px;
+  right: 25px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: #111111;
+  padding: 0 20px;
+  color: #ffffff;
+  font-size: 10px;
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+.loadingPage {
+  width: 100%;
+  max-width: 1480px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 405px);
+  gap: 25px;
+  margin: 0 auto;
+  padding: 145px 30px 100px;
+}
+
+.loadingMain,
+.loadingSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  border: 1px solid #dfdfda;
+  padding: 30px;
+}
+
+.loadingMain span,
+.loadingSummary span {
+  display: block;
+  height: 13px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece8 25%,
+      #f6f6f2 50%,
+      #ecece8 75%
+    );
+  background-size: 200% 100%;
+  animation: checkoutSkeleton 1.4s infinite;
+}
+
+.loadingMain span:nth-child(1) {
+  width: 35%;
+  height: 35px;
+}
+
+.loadingMain span:nth-child(2) {
+  width: 100%;
+  height: 180px;
+  border-radius: 0;
+}
+
+.loadingMain span:nth-child(3) {
+  width: 100%;
+  height: 180px;
+  border-radius: 0;
+}
+
+.loadingMain span:nth-child(4) {
+  width: 100%;
+  height: 130px;
+  border-radius: 0;
+}
+
+.loadingSummary span:nth-child(1) {
+  width: 50%;
+  height: 30px;
+}
+
+.loadingSummary span:nth-child(2) {
+  width: 100%;
+  height: 180px;
+  border-radius: 0;
+}
+
+.loadingSummary span:nth-child(3) {
+  width: 100%;
+  height: 100px;
+  border-radius: 0;
+}
+
+.loadingSummary span:nth-child(4) {
+  width: 100%;
+  height: 55px;
+  border-radius: 0;
+}
+
+@keyframes checkoutSkeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .checkoutLayout,
+  .loadingPage {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryPanel {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding:
+      105px 17px 75px;
+  }
+
+  .topNavigation {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .steps {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .panel {
+    padding: 23px 18px;
+  }
+
+  .panelHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .addressGrid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: auto;
+  }
+
+  .loadingPage {
+    padding:
+      115px 17px 75px;
+  }
+}
+
+@media (max-width: 450px) {
+  .page {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .summaryPanel {
+    padding: 24px 19px;
+  }
+
+  .summaryItem {
+    grid-template-columns:
+      55px minmax(0, 1fr);
+  }
+
+  .summaryItemPrice {
+    grid-column: 2;
+  }
+
+  .successToast {
+    top: 90px;
+    right: 13px;
+    left: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadingMain span,
+  .loadingSummary span {
+    animation: none;
+  }
+}

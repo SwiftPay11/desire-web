@@ -1,0 +1,982 @@
+.page {
+  width: 100%;
+  max-width: 1480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 125px 30px 100px;
+  background: #ffffff;
+  color: #111111;
+}
+
+.topNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 29px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 19px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #595954;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backLink svg,
+.continueButton svg,
+.addressIcon svg,
+.paymentIcon svg,
+.creditNotice svg,
+.securityMessage svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  color: #a0a09b;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.steps .activeStep {
+  color: #111111;
+}
+
+.hero {
+  margin-bottom: 31px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 40px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 11px;
+  color: #858580;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(45px, 6vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.hero p {
+  max-width: 660px;
+  margin: 22px 0 0;
+  color: #70706b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 14px 17px;
+}
+
+.errorBanner p {
+  margin: 0;
+  color: #8f4141;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.errorBanner button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #8f4141;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.reviewLayout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 405px);
+  align-items: start;
+  gap: 25px;
+}
+
+.mainColumn {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 30px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.panelHeader .eyebrow {
+  margin-bottom: 8px;
+}
+
+.panelHeader h2,
+.summaryPanel h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.editLink {
+  border-bottom: 1px solid #777772;
+  padding-bottom: 4px;
+  color: #666661;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.productList {
+  border-top: 1px solid #e2e2dd;
+}
+
+.productItem {
+  display: grid;
+  grid-template-columns:
+    110px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e2e2dd;
+  padding: 23px 0;
+}
+
+.productItem:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.productImage {
+  position: relative;
+  width: 110px;
+  height: 138px;
+  background: #f0f0ec;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.productImage > span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.productDetails > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #94948f;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.productDetails h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.productDetails p {
+  margin: 11px 0 0;
+  color: #74746f;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.productDetails small {
+  display: block;
+  margin-top: 10px;
+  color: #888883;
+  font-size: 8px;
+}
+
+.productSubtotal {
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.addressReview {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 1px solid #deded9;
+  background: #fafaf7;
+  padding: 23px;
+}
+
+.addressIcon {
+  width: 43px;
+  height: 43px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d4d4cf;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.addressReview strong {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 11px;
+}
+
+.addressReview p {
+  margin: 3px 0;
+  color: #73736e;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.defaultBadge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #111111;
+  padding: 6px 8px;
+  color: #ffffff;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.missingInformation {
+  margin: 0;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 16px;
+  color: #8f4141;
+  font-size: 10px;
+}
+
+.notesReview {
+  border: 1px solid #deded9;
+  background: #fafaf7;
+  padding: 21px;
+}
+
+.notesReview p {
+  margin: 0;
+  color: #666661;
+  font-size: 10px;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.paymentOptions {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.paymentCard {
+  position: relative;
+  min-height: 230px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border: 1px solid #d8d8d3;
+  background: #fafaf7;
+  padding: 22px;
+  cursor: pointer;
+  color: #111111;
+  text-align: left;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.paymentCard:hover {
+  border-color: #999994;
+}
+
+.selectedPayment {
+  border-color: #111111;
+  background: #ffffff;
+}
+
+.unavailablePayment {
+  background: #f5f5f2;
+}
+
+.paymentRadio {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.selectedPayment .paymentRadio {
+  border-color: #111111;
+  background: #111111;
+  box-shadow:
+    inset 0 0 0 4px #ffffff;
+}
+
+.paymentIcon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6d6d1;
+  background: #ffffff;
+}
+
+.paymentContent {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.paymentContent > strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.paymentContent small {
+  margin-top: 12px;
+  color: #767671;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.paymentContent b {
+  display: block;
+  margin-top: auto;
+  padding-top: 22px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.creditPanel {
+  margin-top: 16px;
+  background: #111111;
+  padding: 27px;
+  color: #ffffff;
+}
+
+.creditPanelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.creditLabel {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.creditPanel h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.creditStatus {
+  min-height: 29px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: 1px solid;
+  padding: 0 10px;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.activeCreditStatus {
+  border-color: rgba(130, 220, 145, 0.6);
+  color: #a8e3b1;
+}
+
+.inactiveCreditStatus {
+  border-color: rgba(255, 180, 180, 0.45);
+  color: #f0b4b4;
+}
+
+.creditGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  border-top:
+    1px solid rgba(255, 255, 255, 0.16);
+  border-left:
+    1px solid rgba(255, 255, 255, 0.16);
+}
+
+.creditGrid > div {
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right:
+    1px solid rgba(255, 255, 255, 0.16);
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.16);
+  padding: 18px;
+}
+
+.creditGrid span {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.creditGrid strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.creditNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 19px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.creditNotice p {
+  margin: 0;
+  font-size: 8px;
+  line-height: 1.65;
+}
+
+.creditUnavailable {
+  border: 1px solid
+    rgba(255, 255, 255, 0.16);
+  padding: 20px;
+}
+
+.creditUnavailable p {
+  margin: 0;
+  color: #f0b4b4;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.creditUnavailable span {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 8px;
+  line-height: 1.65;
+}
+
+.summaryPanel {
+  position: sticky;
+  top: 105px;
+  border: 1px solid #dfdfda;
+  background: #f8f8f4;
+  padding: 29px;
+}
+
+.summaryPanel h2 {
+  margin-bottom: 27px;
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-top: 1px solid #deded9;
+  border-bottom: 1px solid #deded9;
+  padding: 22px 0;
+}
+
+.summaryRows > div,
+.totalRow,
+.creditSummary > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.summaryRows span,
+.creditSummary span {
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.summaryRows strong,
+.creditSummary strong {
+  color: #333330;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.discountRow strong {
+  color: #367342;
+}
+
+.totalRow {
+  align-items: center;
+  padding: 24px 0;
+}
+
+.totalRow span {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.totalRow strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.creditSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 20px;
+  border-top: 1px solid #deded9;
+  border-bottom: 1px solid #deded9;
+  background: #ffffff;
+  padding: 17px;
+}
+
+.continueButton {
+  width: 100%;
+  min-height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 19px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.continueButton:disabled {
+  border-color: #aaa;
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.returnLink {
+  display: block;
+  margin-top: 17px;
+  color: #555550;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+}
+
+.securityMessage {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 24px;
+  border-top: 1px solid #deded9;
+  padding-top: 20px;
+  color: #777772;
+}
+
+.securityMessage p {
+  margin: 0;
+  font-size: 8px;
+  line-height: 1.65;
+}
+
+.loadingPage {
+  width: 100%;
+  max-width: 1480px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 405px);
+  gap: 25px;
+  margin: 0 auto;
+  padding: 145px 30px 100px;
+}
+
+.loadingMain,
+.loadingSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid #dfdfda;
+  padding: 30px;
+}
+
+.loadingMain span,
+.loadingSummary span {
+  display: block;
+  height: 14px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece8 25%,
+      #f6f6f2 50%,
+      #ecece8 75%
+    );
+  background-size: 200% 100%;
+  animation: reviewSkeleton 1.4s infinite;
+}
+
+.loadingMain span:nth-child(1) {
+  width: 40%;
+  height: 40px;
+}
+
+.loadingMain span:nth-child(2) {
+  width: 100%;
+  height: 220px;
+  border-radius: 0;
+}
+
+.loadingMain span:nth-child(3) {
+  width: 100%;
+  height: 170px;
+  border-radius: 0;
+}
+
+.loadingMain span:nth-child(4) {
+  width: 100%;
+  height: 270px;
+  border-radius: 0;
+}
+
+.loadingSummary span:nth-child(1) {
+  width: 45%;
+  height: 30px;
+}
+
+.loadingSummary span:nth-child(2) {
+  width: 100%;
+  height: 140px;
+  border-radius: 0;
+}
+
+.loadingSummary span:nth-child(3) {
+  width: 100%;
+  height: 80px;
+  border-radius: 0;
+}
+
+.loadingSummary span:nth-child(4) {
+  width: 100%;
+  height: 58px;
+  border-radius: 0;
+}
+
+@keyframes reviewSkeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .reviewLayout,
+  .loadingPage {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryPanel {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding:
+      105px 17px 75px;
+  }
+
+  .topNavigation {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .steps {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .panel {
+    padding: 23px 18px;
+  }
+
+  .panelHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .paymentOptions {
+    grid-template-columns: 1fr;
+  }
+
+  .creditGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .loadingPage {
+    padding:
+      115px 17px 75px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productItem {
+    grid-template-columns:
+      85px minmax(0, 1fr);
+    align-items: flex-start;
+  }
+
+  .productImage {
+    width: 85px;
+    height: 110px;
+  }
+
+  .productSubtotal {
+    grid-column: 2;
+  }
+
+  .addressReview {
+    padding: 19px;
+  }
+
+  .defaultBadge {
+    position: static;
+    align-self: flex-start;
+    margin-left: auto;
+  }
+
+  .creditPanel {
+    padding: 22px 17px;
+  }
+
+  .creditPanelHeader {
+    flex-direction: column;
+  }
+
+  .creditGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryPanel {
+    padding: 24px 19px;
+  }
+
+  .paymentCard {
+    min-height: 210px;
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paymentCard,
+  .loadingMain span,
+  .loadingSummary span {
+    animation: none;
+    transition: none;
+  }
+}
+
+.creditApplyArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 16px;
+  border-top:
+    1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 17px;
+}
+
+.creditApplyArea > span {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 8px;
+  line-height: 1.7;
+}
+
+.creditApplyButton {
+  min-height: 43px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 0 16px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.creditApplyButton svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 520px) {
+  .creditApplyArea {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .creditApplyButton {
+    width: 100%;
+  }
+}

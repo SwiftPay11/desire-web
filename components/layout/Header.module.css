@@ -1,0 +1,448 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(17, 17, 17, 0.12);
+  box-shadow: 0 8px 30px rgba(17, 17, 17, 0.05);
+}
+
+.headerInner {
+  width: 100%;
+  min-height: 82px;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  grid-column: 1;
+  justify-self: start;
+  color: #111111;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.desktopNavigation {
+  grid-column: 2;
+}
+
+.navigationList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigationLink {
+  position: relative;
+  display: inline-block;
+  padding: 31px 0 28px;
+  color: #333333;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.navigationLink::after {
+  content: '';
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #111111;
+  transition: width 0.3s ease;
+}
+
+.navigationLink:hover,
+.activeLink {
+  color: #111111;
+}
+
+.navigationLink:hover::after,
+.activeLink::after {
+  width: 100%;
+}
+
+.actions {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.actionButton,
+.cartButton {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #111111;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.actionButton:hover,
+.cartButton:hover {
+  background: #f4f4f4;
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cartCount {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #111111;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.mobileMenuButton {
+  display: none;
+}
+
+.mobileOverlay,
+.mobileNavigation {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .navigationList {
+    gap: 22px;
+  }
+
+  .navigationLink {
+    font-size: 11px;
+    letter-spacing: 1.1px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerInner {
+    min-height: 72px;
+    padding: 0 20px;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .desktopNavigation {
+    display: none;
+  }
+
+  .logo {
+    grid-column: 2;
+    justify-self: center;
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  .actions {
+    grid-column: 3;
+    gap: 2px;
+  }
+
+  .actions .actionButton:first-child {
+    display: none;
+  }
+
+  .actionButton,
+  .cartButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .mobileMenuButton {
+    grid-column: 1;
+    justify-self: start;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menuLine {
+    width: 23px;
+    height: 1px;
+    display: block;
+    background: #111111;
+    transform-origin: center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.2s ease,
+      width 0.3s ease;
+  }
+
+  .menuLine:nth-child(2) {
+    width: 17px;
+  }
+
+  .menuLineTopOpen {
+    width: 22px;
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menuLineMiddleOpen {
+    opacity: 0;
+  }
+
+  .menuLineBottomOpen {
+    width: 22px;
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .mobileOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+    display: block;
+    background: rgba(17, 17, 17, 0.38);
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  .mobileOverlayVisible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobileNavigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    width: min(88%, 390px);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 28px 32px;
+    background: #ffffff;
+    box-shadow: 24px 0 60px rgba(17, 17, 17, 0.14);
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition:
+      transform 0.4s cubic-bezier(0.77, 0, 0.18, 1),
+      visibility 0.4s ease;
+  }
+
+  .mobileNavigationOpen {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .mobileNavigationHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .mobileLogo {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    letter-spacing: 4px;
+  }
+
+  .mobileCloseButton {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #111111;
+    background: transparent;
+    border: 1px solid #e4e4e4;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .closeIcon {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+  }
+
+  .mobileNavigationList {
+    margin: 34px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobileNavigationList li {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .mobileNavigationLink {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    color: #444444;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      color 0.25s ease,
+      padding-left 0.25s ease;
+  }
+
+  .mobileNavigationLink:hover,
+  .mobileActiveLink {
+    padding-left: 6px;
+    color: #111111;
+  }
+
+  .mobileLinkNumber {
+    min-width: 22px;
+    color: #999999;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .mobileActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .mobileActionLink {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #111111;
+    background: #ffffff;
+    border: 1px solid #111111;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .mobileCartCount {
+    min-width: 19px;
+    height: 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #111111;
+    border-radius: 50%;
+    font-size: 9px;
+  }
+
+  .mobileFooterText {
+    margin-top: auto;
+    padding-top: 28px;
+    color: #888888;
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerInner {
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 20px;
+    letter-spacing: 2.8px;
+  }
+
+  .actions .actionButton {
+    display: none;
+  }
+
+  .mobileNavigation {
+    width: 91%;
+    padding: 24px 22px 28px;
+  }
+
+  .mobileNavigationLink {
+    font-size: 23px;
+  }
+}

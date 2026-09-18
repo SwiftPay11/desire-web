@@ -1,0 +1,454 @@
+.page {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.backRow {
+  margin-bottom: 28px;
+}
+
+.backRow a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backRow svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #dcdcd7;
+  padding-bottom: 42px;
+}
+
+.heroContent {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #777773;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    45px,
+    6vw,
+    72px
+  );
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+}
+
+.heroContent p {
+  max-width: 630px;
+  margin: 23px 0 0;
+  color: #6f6f6a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.heroAside {
+  min-width: 210px;
+  border-left: 1px solid #ddddda;
+  padding-left: 28px;
+}
+
+.heroAside span {
+  display: block;
+  margin-bottom: 9px;
+  color: #81817c;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroAside strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.errorBanner {
+  margin-bottom: 22px;
+  border-left: 3px solid #111111;
+  background: #f6f6f3;
+  padding: 19px 21px;
+}
+
+.errorBanner strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.errorBanner p {
+  margin: 7px 0 0;
+  color: #666662;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formSection {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 0.65fr)
+    minmax(0, 1.6fr);
+  gap: 45px;
+  border: 1px solid #deded9;
+  background: #ffffff;
+  padding: 35px;
+}
+
+.sectionIntro {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.sectionIntro > span {
+  min-width: 31px;
+  color: #8a8a85;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 15px;
+}
+
+.sectionIntro h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.sectionIntro p {
+  max-width: 280px;
+  margin: 13px 0 0;
+  color: #7a7a75;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  gap: 23px 18px;
+}
+
+.field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.fullField {
+  grid-column: 1 / -1;
+}
+
+.fieldLabel {
+  margin-bottom: 9px;
+  color: #4f4f4b;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d5d5d0;
+  border-radius: 0;
+  outline: none;
+  background: #ffffff;
+  color: #111111;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.field input,
+.field select {
+  height: 50px;
+  padding: 0 15px;
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding: 15px;
+  line-height: 1.7;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #111111;
+  background: #fdfdfb;
+}
+
+.field small {
+  margin-top: 7px;
+  color: #8a8a85;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.fieldError {
+  margin-top: 7px;
+  color: #9a3030;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.moneyInput {
+  position: relative;
+}
+
+.moneyInput > span {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  z-index: 1;
+  transform:
+    translateY(-50%);
+  color: #777773;
+  font-size: 12px;
+}
+
+.moneyInput input {
+  padding-left: 33px;
+}
+
+.submitSection {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 45px;
+  background: #111111;
+  color: #ffffff;
+  padding: 39px;
+}
+
+.submitSection > div {
+  max-width: 650px;
+}
+
+.submitSection .eyebrow {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+}
+
+.submitSection h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    29px,
+    4vw,
+    42px
+  );
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.submitSection p {
+  max-width: 590px;
+  margin: 14px 0 0;
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.submitSection button {
+  min-height: 52px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  padding: 0 22px;
+  color: #111111;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submitSection button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.submitSection button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loadingState {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingState span {
+  color: #777773;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.loadingState p {
+  margin: 12px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .formSection {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sectionIntro p {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .heroAside {
+    width: 100%;
+    border-top: 1px solid #ddddda;
+    border-left: 0;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .fullField {
+    grid-column: auto;
+  }
+
+  .submitSection {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 31px 23px;
+  }
+
+  .submitSection button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero h1 {
+    font-size: 41px;
+  }
+
+  .formSection {
+    padding: 25px 19px;
+  }
+
+  .sectionIntro {
+    gap: 12px;
+  }
+
+  .sectionIntro h2 {
+    font-size: 26px;
+  }
+}

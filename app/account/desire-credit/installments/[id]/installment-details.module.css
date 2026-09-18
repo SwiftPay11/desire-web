@@ -1,0 +1,614 @@
+.page {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.backRow {
+  margin-bottom: 28px;
+}
+
+.backRow a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.backRow svg,
+.payButton svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eyebrow,
+.eyebrowLight {
+  display: block;
+  margin-bottom: 12px;
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.eyebrowLight {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.58
+  );
+}
+
+.loadingState,
+.errorState {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loadingState > span,
+.errorState > span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.loadingState h1,
+.errorState h1 {
+  margin: 14px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.loadingState p,
+.errorState p {
+  max-width: 520px;
+  margin: 13px 0 0;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.primaryButton {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  background: #111111;
+  padding: 0 20px;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  padding: 42px;
+  color: #ffffff;
+}
+
+.hero::after {
+  position: absolute;
+  top: -170px;
+  right: -130px;
+  width: 390px;
+  height: 390px;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.09
+    );
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.heroTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.heroTop h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    43px,
+    6vw,
+    70px
+  );
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.heroTop p {
+  max-width: 570px;
+  margin: 19px 0 0;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.64
+  );
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.statusBadge {
+  min-height: 33px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+  padding: 0 13px;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.83
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.balanceGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.75fr)
+    minmax(0, 0.75fr);
+  gap: 1px;
+  margin-top: 35px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.15
+  );
+}
+
+.balanceGrid > div {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111111;
+  padding: 22px;
+}
+
+.balanceGrid span {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.balanceGrid strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.mainBalance strong {
+  font-size: clamp(
+    36px,
+    5vw,
+    54px
+  );
+  letter-spacing: -0.04em;
+}
+
+.notice {
+  display: grid;
+  grid-template-columns:
+    minmax(250px, 0.7fr)
+    minmax(0, 1fr);
+  gap: 40px;
+  margin-top: 22px;
+  border: 1px solid #deded9;
+  border-left: 3px solid #111111;
+  background: #f7f7f4;
+  padding: 27px;
+}
+
+.notice span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.notice h2 {
+  margin: 9px 0 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.notice p {
+  margin: 0;
+  color: #6f6f6a;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 22px;
+  background: #ddddda;
+}
+
+.detailItem {
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.detailItem span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.detailItem strong {
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.progressCard {
+  margin-top: 22px;
+  border: 1px solid #deded9;
+  background: #ffffff;
+  padding: 31px;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.progressHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.progressHeader > strong {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 31px;
+  font-weight: 400;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  margin-top: 28px;
+  background: #e5e5e0;
+}
+
+.progressFill {
+  height: 100%;
+  background: #111111;
+  transition: width 0.3s ease;
+}
+
+.progressAmounts {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 20px;
+  background: #ddddda;
+}
+
+.progressAmounts > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  padding: 17px;
+}
+
+.progressAmounts span {
+  color: #777773;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.progressAmounts strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.paymentCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 22px;
+  background: #111111;
+  padding: 31px;
+  color: #ffffff;
+}
+
+.paymentCard > div {
+  max-width: 650px;
+}
+
+.paymentCard .eyebrow {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  );
+}
+
+.paymentCard h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.paymentCard p {
+  margin: 11px 0 0;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.62
+  );
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.payButton {
+  min-height: 49px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 0 19px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.paymentState {
+  min-height: 34px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: 1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+  padding: 0 13px;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.75
+  );
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.referenceCard {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+  gap: 1px;
+  margin-top: 22px;
+  background: #ddddda;
+}
+
+.referenceCard > div {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f8f8f5;
+  padding: 19px;
+}
+
+.referenceCard span {
+  color: #777773;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.referenceCard strong {
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .detailsGrid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+  .paymentCard {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 31px 22px;
+  }
+
+  .heroTop {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .heroTop h1 {
+    font-size: 43px;
+  }
+
+  .balanceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainBalance strong {
+    font-size: 42px;
+  }
+
+  .notice {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .progressCard {
+    padding: 23px 18px;
+  }
+
+  .referenceCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .detailsGrid,
+  .progressAmounts {
+    grid-template-columns: 1fr;
+  }
+
+  .progressHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .paymentCard {
+    padding: 25px 20px;
+  }
+
+  .payButton {
+    width: 100%;
+  }
+
+  .loadingState h1,
+  .errorState h1 {
+    font-size: 34px;
+  }
+}

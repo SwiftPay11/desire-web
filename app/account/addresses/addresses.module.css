@@ -1,0 +1,574 @@
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: #111111;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 38px;
+}
+
+.hero > div {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #858580;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(48px, 7vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.hero p {
+  max-width: 630px;
+  margin: 20px 0 0;
+  color: #6e6e69;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.addButton,
+.emptyButton {
+  min-height: 49px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 19px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.addButton svg,
+.emptyButton svg,
+.toast svg,
+.locationIcon svg,
+.addressActions svg,
+.emptyIcon svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 14px 17px;
+}
+
+.errorBanner p {
+  margin: 0;
+  color: #8f4141;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.errorBanner button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #8f4141;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.formPanel {
+  margin-bottom: 25px;
+  border: 1px solid #dfdfda;
+  background: #fafaf7;
+  padding: 30px;
+}
+
+.formHeader {
+  margin-bottom: 25px;
+}
+
+.formHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.formGrid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGrid label > span {
+  color: #73736e;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.formGrid input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d1d1cc;
+  border-radius: 0;
+  outline: 0;
+  background: #ffffff;
+  padding: 0 13px;
+  color: #222220;
+  font: inherit;
+  font-size: 10px;
+}
+
+.formGrid input:focus {
+  border-color: #111111;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.defaultCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #555550;
+  font-size: 9px;
+}
+
+.defaultCheckbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.defaultCheckbox > span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaa;
+  background: #ffffff;
+}
+
+.defaultCheckbox input:checked + span {
+  border-color: #111111;
+  background: #111111;
+  box-shadow:
+    inset 0 0 0 3px #ffffff;
+}
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.saveButton,
+.cancelButton {
+  min-height: 47px;
+  border: 1px solid #111111;
+  padding: 0 20px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.saveButton {
+  background: #111111;
+  color: #ffffff;
+}
+
+.cancelButton {
+  background: #ffffff;
+  color: #111111;
+}
+
+.saveButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.addressSection {
+  border-top: 1px solid #deded9;
+  padding-top: 31px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.addressCount {
+  color: #858580;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.addressGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.addressCard {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfdfda;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.defaultAddress {
+  border-color: #111111;
+}
+
+.addressCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.locationIcon {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d2d2cd;
+  border-radius: 50%;
+  background: #fafaf7;
+}
+
+.defaultBadge {
+  background: #111111;
+  padding: 7px 9px;
+  color: #ffffff;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.addressContent {
+  flex: 1;
+}
+
+.addressContent h3 {
+  margin: 0 0 14px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.addressContent p {
+  margin: 3px 0;
+  color: #6f6f6a;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.addressContent .phone {
+  margin-top: 13px;
+  color: #333330;
+  font-weight: 600;
+}
+
+.addressActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 24px;
+  border-top: 1px solid #e1e1dc;
+  padding-top: 18px;
+}
+
+.addressActions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #5d5d58;
+  font: inherit;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.addressActions button:hover {
+  color: #111111;
+}
+
+.addressActions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.addressActions .deleteButton {
+  color: #9b4545;
+}
+
+.emptyState {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfdfda;
+  background: #fafaf7;
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 68px;
+  height: 68px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border: 1px solid #d2d2cd;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.emptyState h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.emptyState p {
+  max-width: 470px;
+  margin: 14px auto 24px;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.toast {
+  position: fixed;
+  z-index: 4000;
+  top: 105px;
+  right: 25px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #111111;
+  padding: 0 18px;
+  color: #ffffff;
+  font-size: 9px;
+  box-shadow:
+    0 15px 45px
+    rgba(0, 0, 0, 0.18);
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skeletonCard {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid #dfdfda;
+  padding: 24px;
+}
+
+.skeletonCard span {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece8 25%,
+      #f6f6f2 50%,
+      #ecece8 75%
+    );
+  background-size: 200% 100%;
+  animation: addressSkeleton 1.4s infinite;
+}
+
+.skeletonCard span:nth-child(1) {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.skeletonCard span:nth-child(2) {
+  width: 55%;
+  height: 25px;
+}
+
+.skeletonCard span:nth-child(3) {
+  width: 85%;
+}
+
+.skeletonCard span:nth-child(4) {
+  width: 65%;
+}
+
+@keyframes addressSkeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .addressGrid,
+  .skeletonGrid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .formPanel {
+    padding: 23px 17px;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .addressCard {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+
+  .formActions {
+    flex-direction: column;
+  }
+
+  .saveButton,
+  .cancelButton {
+    width: 100%;
+  }
+
+  .toast {
+    top: 90px;
+    right: 13px;
+    left: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonCard span {
+    animation: none;
+  }
+}

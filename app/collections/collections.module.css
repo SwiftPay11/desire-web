@@ -1,0 +1,405 @@
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+}
+
+.hero {
+  border-bottom: 1px solid #deded9;
+  background: #f6f6f2;
+  padding: 145px 30px 85px;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 15px;
+  color: #858580;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(58px, 10vw, 132px);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: 30px 0 0;
+  color: #6d6d68;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 30px 110px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 42px;
+  border-bottom: 1px solid #deded9;
+  padding-bottom: 28px;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(33px, 5vw, 61px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.count {
+  color: #7c7c77;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 65px 24px;
+}
+
+.collectionCard {
+  min-width: 0;
+}
+
+.collectionLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #e9e9e4;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 800ms ease;
+}
+
+.collectionLink:hover img {
+  transform: scale(1.035);
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      135deg,
+      #e7e7e1,
+      #cacac2
+    );
+}
+
+.placeholder span {
+  color: rgba(17, 17, 17, 0.2);
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(40px, 8vw, 100px);
+  letter-spacing: -0.06em;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.05) 60%
+    );
+}
+
+.cardContent {
+  position: absolute;
+  right: 28px;
+  bottom: 27px;
+  left: 28px;
+  color: #ffffff;
+}
+
+.cardContent > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.cardContent h3 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(29px, 4vw, 53px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.exploreLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 23px;
+  border-top:
+    1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 16px;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.exploreLink svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 200ms ease;
+}
+
+.collectionLink:hover
+  .exploreLink
+  svg {
+  transform: translateX(5px);
+}
+
+.description {
+  max-width: 570px;
+  margin: 16px 0 0;
+  color: #74746f;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.statePanel {
+  min-height: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #deded9;
+  background: #fafaf7;
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.stateIcon {
+  width: 66px;
+  height: 66px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 1px solid #d3d3ce;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.stateIcon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #4b4b47;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.statePanel h2 {
+  max-width: 650px;
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(31px, 5vw, 50px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.statePanel p {
+  max-width: 500px;
+  margin: 17px auto 28px;
+  color: #74746f;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.primaryButton {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 25px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.skeletonImage {
+  aspect-ratio: 16 / 11;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece7 25%,
+      #f6f6f2 50%,
+      #ecece7 75%
+    );
+  background-size: 200% 100%;
+  animation:
+    skeletonLoading 1.4s infinite;
+}
+
+.skeletonDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 17px;
+}
+
+.skeletonDetails span {
+  height: 10px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #ecece7 25%,
+      #f6f6f2 50%,
+      #ecece7 75%
+    );
+  background-size: 200% 100%;
+  animation:
+    skeletonLoading 1.4s infinite;
+}
+
+.skeletonDetails span:first-child {
+  width: 42%;
+  height: 18px;
+}
+
+.skeletonDetails span:last-child {
+  width: 75%;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding:
+      125px 22px 68px;
+  }
+
+  .content {
+    padding:
+      55px 22px 90px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding:
+      110px 16px 58px;
+  }
+
+  .content {
+    padding:
+      45px 15px 75px;
+  }
+
+  .sectionHeading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cardContent {
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageWrapper img,
+  .exploreLink svg,
+  .skeletonImage,
+  .skeletonDetails span {
+    animation: none;
+    transition: none;
+  }
+}

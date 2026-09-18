@@ -1,0 +1,296 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns:
+    minmax(360px, 0.85fr)
+    minmax(520px, 1.15fr);
+  background: #ffffff;
+  color: #111111;
+}
+
+.brandPanel {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #111111;
+  padding: 50px;
+  color: #ffffff;
+}
+
+.brandContent {
+  max-width: 560px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.brandMark {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+.brandContent h1 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    54px,
+    7vw,
+    92px
+  );
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.brandContent p {
+  max-width: 470px;
+  margin: 25px 0 0;
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+  font-size: 11px;
+  line-height: 1.85;
+}
+
+.brandFooter {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.35
+    );
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.loginPanel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 500px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #858580;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.loginCard h2 {
+  margin: 0;
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+  font-size: clamp(
+    45px,
+    6vw,
+    68px
+  );
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.intro {
+  margin: 18px 0 31px;
+  color: #74746f;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.errorBanner {
+  margin-bottom: 20px;
+  border: 1px solid #e0baba;
+  background: #faf0f0;
+  padding: 14px 16px;
+  color: #8f4141;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form label > span {
+  color: #6e6e69;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.inputWrapper {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid #d2d2cd;
+  background: #ffffff;
+  padding: 0 13px;
+}
+
+.inputWrapper:focus-within {
+  border-color: #111111;
+}
+
+.inputWrapper svg,
+.submitButton svg,
+.securityNotice svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.inputWrapper > svg {
+  color: #858580;
+}
+
+.inputWrapper input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111111;
+  font: inherit;
+  font-size: 10px;
+}
+
+.eyeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 5px;
+  cursor: pointer;
+  color: #73736e;
+}
+
+.submitButton {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 6px;
+  border: 1px solid #111111;
+  background: #111111;
+  padding: 0 19px;
+  cursor: pointer;
+  color: #ffffff;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.securityNotice {
+  display: grid;
+  grid-template-columns:
+    18px minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 25px;
+  border-top: 1px solid #deded9;
+  padding-top: 20px;
+  color: #82827d;
+}
+
+.securityNotice p {
+  margin: 0;
+  font-size: 8px;
+  line-height: 1.65;
+}
+
+@media (
+  max-width: 900px
+) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .brandPanel {
+    min-height: auto;
+    padding: 35px 25px;
+  }
+
+  .brandContent {
+    margin: 40px 0;
+  }
+
+  .brandContent h1 {
+    font-size: 58px;
+  }
+
+  .loginPanel {
+    min-height: auto;
+    padding: 55px 25px;
+  }
+}
+
+@media (
+  max-width: 520px
+) {
+  .brandPanel {
+    padding: 28px 18px;
+  }
+
+  .brandContent h1 {
+    font-size: 46px;
+  }
+
+  .loginPanel {
+    padding:
+      45px 17px 70px;
+  }
+
+  .loginCard h2 {
+    font-size: 45px;
+  }
+}
