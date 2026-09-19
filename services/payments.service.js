@@ -265,9 +265,37 @@ export async function submitPaymentProof(
 // ADMIN PAYMENTS
 // ==========================
 
-export async function getAdminPayments() {
+export async function getAdminPayments({
+  purpose = '',
+  status = '',
+} = {}) {
+  const params =
+    new URLSearchParams();
+
+  if (purpose) {
+    params.set(
+      'purpose',
+      purpose,
+    );
+  }
+
+  if (status) {
+    params.set(
+      'status',
+      status,
+    );
+  }
+
+  const query =
+    params.toString();
+
+  const endpoint =
+    query
+      ? `${ENDPOINTS.PAYMENTS.ADMIN_GET_ALL}?${query}`
+      : ENDPOINTS.PAYMENTS.ADMIN_GET_ALL;
+
   return apiFetch(
-    ENDPOINTS.PAYMENTS.ADMIN_GET_ALL,
+    endpoint,
     {
       method: 'GET',
     },

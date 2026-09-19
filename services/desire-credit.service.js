@@ -569,3 +569,89 @@ export async function getMyCreditInstallment(
     },
   );
 }
+
+/*
+|--------------------------------------------------------------------------
+| ADMIN CREDIT PURCHASES
+|--------------------------------------------------------------------------
+*/
+
+export async function getAdminCreditPurchases(
+  status = '',
+) {
+  const query =
+    status
+      ? `?status=${encodeURIComponent(
+          status,
+        )}`
+      : '';
+
+  return apiFetch(
+    `${ENDPOINTS.DESIRE_CREDIT.ADMIN_PURCHASES}${query}`,
+    {
+      method: 'GET',
+    },
+  );
+}
+
+export async function getAdminCreditPurchase(
+  purchaseId,
+) {
+  if (!purchaseId) {
+    throw new Error(
+      'Credit purchase ID is required.',
+    );
+  }
+
+  return apiFetch(
+    ENDPOINTS.DESIRE_CREDIT.ADMIN_PURCHASE(
+      purchaseId,
+    ),
+    {
+      method: 'GET',
+    },
+  );
+}
+
+/*
+|--------------------------------------------------------------------------
+| ADMIN CREDIT INSTALLMENTS
+|--------------------------------------------------------------------------
+*/
+
+export async function getAdminCreditInstallments(
+  status = '',
+) {
+  const query =
+    status
+      ? `?status=${encodeURIComponent(
+          status,
+        )}`
+      : '';
+
+  return apiFetch(
+    `${ENDPOINTS.DESIRE_CREDIT.ADMIN_INSTALLMENTS}${query}`,
+    {
+      method: 'GET',
+    },
+  );
+}
+
+export async function getAdminCreditInstallment(
+  installmentId,
+) {
+  if (!installmentId) {
+    throw new Error(
+      'Installment ID is required.',
+    );
+  }
+
+  return apiFetch(
+    ENDPOINTS.DESIRE_CREDIT.ADMIN_INSTALLMENT(
+      installmentId,
+    ),
+    {
+      method: 'GET',
+    },
+  );
+}

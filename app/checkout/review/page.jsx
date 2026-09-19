@@ -109,6 +109,20 @@ function normalizeAddresses(response) {
   return [];
 }
 
+function normalizeCreditAccount(
+  response,
+) {
+  return (
+    response?.account ||
+    response?.creditAccount ||
+    response?.data?.account ||
+    response?.data?.creditAccount ||
+    response?.data ||
+    response ||
+    null
+  );
+}
+
 function getAddressId(address) {
   return (
     address?._id ||
@@ -161,18 +175,31 @@ function getCreditEligibility(
         'You do not currently have an approved DESIRE CREDIT account.',
       commitmentPayment: 0,
       financedAmount: 0,
+      availableCredit: 0,
+      creditLimit: 0,
     };
   }
 
-  if (account.status !== 'ACTIVE') {
+  const accountStatus =
+    String(
+      account.status || '',
+    ).toUpperCase();
+
+  if (
+    accountStatus !== 'ACTIVE'
+  ) {
     return {
       eligible: false,
       reason:
         'Your DESIRE CREDIT account is not currently active.',
       commitmentPayment: Number(
-        account.commitmentPayment || 0,
+        account.commitmentPayment ??
+          account.commitmentPaymentAmount ??
+          0,
       ),
       financedAmount: 0,
+      availableCredit: 0,
+      creditLimit: 0,
     };
   }
 
@@ -180,26 +207,76 @@ function getCreditEligibility(
     orderTotal || 0,
   );
 
-  const commitmentPayment = Number(
-    account.commitmentPayment || 0,
+  const creditLimit = Number(
+    account.creditLimit ??
+      account.approvedAmount ??
+      account.approvedCreditLimit ??
+      0,
   );
 
-  if (total <= commitmentPayment) {
+  const usedCredit = Number(
+    account.usedCredit ??
+      account.usedAmount ??
+      account.creditUsed ??
+      0,
+  );
+
+  const returnedAvailableCredit =
+    account.availableCredit ??
+    account.availableAmount ??
+    account.remainingCredit;
+
+  const availableCredit =
+    returnedAvailableCredit !==
+      undefined &&
+    returnedAvailableCredit !== null
+      ? Number(
+          returnedAvailableCredit,
+        )
+      : Math.max(
+          0,
+          creditLimit -
+            usedCredit,
+        );
+
+  const commitmentPayment =
+    Number(
+      account.commitmentPayment ??
+        account.commitmentPaymentAmount ??
+        0,
+    );
+
+  if (
+    !Number.isFinite(total) ||
+    total <= 0
+  ) {
+    return {
+      eligible: false,
+      reason:
+        'Your order total is invalid.',
+      commitmentPayment,
+      financedAmount: 0,
+      availableCredit,
+      creditLimit,
+    };
+  }
+
+  if (
+    total <= commitmentPayment
+  ) {
     return {
       eligible: false,
       reason:
         'Your order total must be greater than the required commitment payment.',
       commitmentPayment,
       financedAmount: 0,
+      availableCredit,
+      creditLimit,
     };
   }
 
   const financedAmount =
     total - commitmentPayment;
-
-  const availableCredit = Number(
-    account.availableCredit || 0,
-  );
 
   if (
     financedAmount >
@@ -211,6 +288,8 @@ function getCreditEligibility(
         'Your available DESIRE CREDIT is not enough to finance this order.',
       commitmentPayment,
       financedAmount,
+      availableCredit,
+      creditLimit,
     };
   }
 
@@ -219,6 +298,8 @@ function getCreditEligibility(
     reason: '',
     commitmentPayment,
     financedAmount,
+    availableCredit,
+    creditLimit,
   };
 }
 
@@ -395,6 +476,7 @@ export default function CheckoutReviewPage() {
     useCallback(async () => {
       try {
         setLoading(true);
+        setCreditLoading(true);
         setError('');
 
         const storedInformation =
@@ -515,14 +597,18 @@ export default function CheckoutReviewPage() {
           creditResult.status ===
           'fulfilled'
         ) {
-          setCreditAccount(
-            creditResult.value?.account ||
-              creditResult.value?.data
-                ?.account ||
+          const normalizedCreditAccount =
+            normalizeCreditAccount(
               creditResult.value,
+            );
+
+          setCreditAccount(
+            normalizedCreditAccount,
           );
 
-          setCreditAccountMissing(false);
+          setCreditAccountMissing(
+            !normalizedCreditAccount,
+          );
         } else if (
           creditResult.reason?.status ===
           404
@@ -1191,8 +1277,8 @@ export default function CheckoutReviewPage() {
 
                         <strong>
                           {formatCurrency(
-                            creditAccount
-                              ?.availableCredit,
+                            creditEligibility
+                              .availableCredit,
                           )}
                         </strong>
                       </div>
@@ -1204,8 +1290,8 @@ export default function CheckoutReviewPage() {
 
                         <strong>
                           {formatCurrency(
-                            creditAccount
-                              ?.creditLimit,
+                            creditEligibility
+                              .creditLimit,
                           )}
                         </strong>
                       </div>
@@ -1257,7 +1343,10 @@ export default function CheckoutReviewPage() {
                         <strong>
                           {formatCurrency(
                             creditAccount
-                              ?.outstandingBalance,
+                              ?.outstandingBalance ??
+                              creditAccount
+                                ?.outstandingAmount ??
+                              0,
                           )}
                         </strong>
                       </div>
@@ -1290,22 +1379,29 @@ export default function CheckoutReviewPage() {
                     </p>
 
                     {creditAccountMissing && (
-  <div className={styles.creditApplyArea}>
-    <span>
-      You can apply for DESIRE CREDIT
-      and track your application from
-      your customer account.
-    </span>
+                      <div
+                        className={
+                          styles.creditApplyArea
+                        }
+                      >
+                        <span>
+                          You can apply for DESIRE
+                          CREDIT and track your
+                          application from your
+                          customer account.
+                        </span>
 
-    <Link
-      href="/account/desire-credit/apply"
-      className={styles.creditApplyButton}
-    >
-      Apply now
-      <ArrowIcon />
-    </Link>
-  </div>
-)}
+                        <Link
+                          href="/account/desire-credit/apply"
+                          className={
+                            styles.creditApplyButton
+                          }
+                        >
+                          Apply now
+                          <ArrowIcon />
+                        </Link>
+                      </div>
+                    )}
 
                     {!creditAccountMissing &&
                       creditAccount
